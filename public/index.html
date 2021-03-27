@@ -14,68 +14,120 @@
 
 <body>
     <!-- Nav Bar -->
-
-    <nav class="md:px-16 px-6 md:py-12 py-8 bg-purple">
-        <div class="flex justify-between items-center">
-            <div class="">
-                <img src="./assets/images/logo.svg" alt="" class="w-40 sm:w-48 md:w-56 lg:w-[16vw]">
-            </div>
-            <div class="" x-data="{openNav: false}">
-                <button
-                    class="md:w-16 sm:w-14 w-12 md:h-16 sm:h-14 h-12 rounded-full bg-purple2 flex items-center justify-center focus:outline-none fixed right-10 z-10"
-                    @click="openNav = true" x-show="!openNav">
-                    <img src="./assets/images/nav-btn.svg" alt="" class="">
-                </button>
-                <!--  :class="openNav ? 'scale-[150]' : 'scale-50'" -->
-                <!-- <div class="fixed bg-purple w-16 h-16 rounded-full z-50 transform scale-200"></div> -->
-                <div class="fixed bg-purple w-16 h-16 rounded-full z-0 transform scale-300" x-show="openNav"
-                    x-transition:enter="transform transition ease-out duration-1000"
-                    x-transition:enter-start="transform scale-0" x-transition:enter-end="transform scale-300"
-                    x-transition:leave="transform transition ease-in duration-1000"
-                    x-transition:leave-start="transform scale-300" x-transition:leave-end="transform scale-0">
+    <div>
+        <nav class="md:px-16 px-6 md:py-12 py-8 bg-purple">
+            <div class="flex justify-between items-center">
+                <div class="">
+                    <img src="./assets/images/logo.svg" alt="" class="w-40 sm:w-48 md:w-56 lg:w-[16vw]">
                 </div>
-                <!-- <div class="fixed inset-0" x-show="openNav"
-                    x-transition:enter="transform origin-right transition ease-out duration-700"
-                    x-transition:enter-start="transform scale-0" x-transition:enter-end="transform scale-100"
-                    x-transition:leave="transform origin-right transition ease-in duration-300"
-                    x-transition:leave-start="transform scale-100" x-transition:leave-end="transform scale-0">
-                    <div class="md:px-16 px-6 md:py-12 py-8">
-                        <div class="flex justify-between items-center">
-                            <div class="">
-                                <img src="./assets/images/logo.svg" alt="" class="w-40 sm:w-48 md:w-56 lg:w-[16vw]">
+                <div class="" x-data="{openNav: false}">
+                    <!-- Nav Toggle Button -->
+                    <button
+                        class="md:w-16 sm:w-14 w-12 md:h-16 sm:h-14 h-12 rounded-full bg-purple2 flex items-center justify-center focus:outline-none  z-10"
+                        @click="openNav = true" x-show="!openNav">
+                        <img src="./assets/images/nav-btn.svg" alt="" class="">
+                    </button>
+
+                    <!-- Nav Toggle Area -->
+                    <div x-show="openNav" class="fixed inset-x-0 top-0 z-50 h-full overflow-y-scroll bg-purple">
+                        <div class="">
+                            <div class="flex justify-between items-center md:px-16 px-6 md:py-12 py-8">
+                                <div class="">
+                                    <img src="./assets/images/logo.svg" alt="" class="w-40 sm:w-48 md:w-56 lg:w-[16vw]">
+                                </div>
+                                <div class="">
+                                    <button
+                                        class="md:w-16 sm:w-14 w-12 md:h-16 sm:h-14 h-12 rounded-full bg-purple2 flex items-center justify-center focus:outline-none"
+                                        @click="openNav = false">
+                                        <img src="./assets/images/close.svg" alt="" class="">
+                                    </button>
+                                </div>
                             </div>
-                            <div class="">
-                                <button
-                                    class="md:w-16 sm:w-14 w-12 md:h-16 sm:h-14 h-12 rounded-full bg-purple2 flex items-center justify-center focus:outline-none fixed top-10 right-10"
-                                    @click="openNav = false">
-                                    <img src="./assets/images/close.svg" alt="" class="">
-                                </button>
+                            <div class="py-20 md:px-16 px-6"
+                                style="background: url('./assets/images/left-ring.svg') left bottom -2rem no-repeat, url('./assets/images/right-ring.svg') right top no-repeat, #4D0ADB; background-size: 18rem, 11rem;">
+                                <ul class="">
+                                    <li class="mb-11 block"><a href="#"
+                                            class="md:text-3xl text-2xl text-white font-medium">Political
+                                            Career</a></li>
+                                    <li class="mb-11 block"><a href="#"
+                                            class="md:text-3xl text-2xl text-white font-medium">Academics
+                                            Pedigree</a></li>
+                                    <li class="mb-11 block"><a href="#"
+                                            class="md:text-3xl text-2xl text-white font-medium">Social
+                                            Enterprise</a></li>
+                                    <li class="mb-11 block"><a href="#"
+                                            class="md:text-3xl text-2xl text-white font-medium">Publications</a></li>
+                                    <li class="mb-11 block"><a href="#"
+                                            class="md:text-3xl text-2xl text-white font-medium">Contact</a></li>
+                                </ul>
                             </div>
+                            <!-- Footer Start -->
                         </div>
+                        <footer class="bg-black">
+                            <div class="container mx-auto py-8 md:px-16 px-6">
+                                <div class="flex flex-wrap justify-between items-start mb-6">
+                                    <div class="pt-2">
+                                        <img src="./assets/images/logo.svg" alt=""
+                                            class="w-28 sm:w-36 md:w-48 lg:w-[16vw]">
+                                    </div>
+                                    <div class="">
+                                        <ul>
+                                            <li class="mb-4"><a href=""
+                                                    class="sm:text-base text-xs text-white font-medium">Political
+                                                    Career</a>
+                                            </li>
+                                            <li class="mb-4"><a href=""
+                                                    class="sm:text-base text-xs text-white font-medium">Professional
+                                                    Career</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="">
+                                        <ul>
+                                            <li class="mb-4"><a href=""
+                                                    class="sm:text-base text-xs text-white font-medium">Political
+                                                    Career</a>
+                                            </li>
+                                            <li class="mb-4"><a href=""
+                                                    class="sm:text-base text-xs text-white font-medium">Professional
+                                                    Career</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap justify-between">
+                                    <p class="sm:text-xs text-[10px] text-paragraph-alt">Copyright © 2021 Ese Owie</p>
+                                    <p class="sm:text-xs text-[10px] text-paragraph-alt">Designed and Developed by
+                                        Techinnover Analytics</p>
+                                </div>
+                            </div>
+
+                        </footer>
                     </div>
-                </div> -->
+                </div>
             </div>
-        </div>
 
-    </nav>
+        </nav>
 
-    <!-- Heros Start-->
-    <section class="bg-purple "
-        style="background: url('./assets/images/left-ring.svg') left bottom -2rem no-repeat, url('./assets/images/right-ring.svg') right top no-repeat, #4D0ADB; background-size: 18rem, 11rem;">
-        <div class="md:px-16 px-6 py-10 mb-8">
-            <p class="text-xs sm:text-sm md:text-base font-semibold text-white tracking-[0.8em] mb-6">ESE STEPHEN OWIE
-            </p>
-            <div class="">
-                <h1 class="text-[14.5vw] sm:text-8xl text-white leading-none">In the pursuit
-                    of <span class="font-semibold text-yellow pb-2"
-                        style="background: url('./assets/images/underline.svg') left bottom no-repeat">Execellence.</span>
-                </h1>
+        <!-- Heros Start-->
+        <section class="-mt-1"
+            style="background: url('./assets/images/left-ring.svg') left bottom -2rem no-repeat, url('./assets/images/right-ring.svg') right top no-repeat, #4D0ADB; background-size: 19rem, 11.5rem;">
+            <div class="md:px-16 px-6 py-10 mb-8">
+                <p class="text-xs sm:text-sm md:text-base font-semibold text-white tracking-[0.8em] mb-6">ESE STEPHEN
+                    OWIE
+                </p>
+                <div class="">
+                    <h1 class="text-[14.5vw] sm:text-8xl text-white leading-none">In the pursuit
+                        of <span class="font-semibold text-yellow pb-2"
+                            style="background: url('./assets/images/underline.svg') left bottom no-repeat">Execellence.</span>
+                    </h1>
+                </div>
             </div>
-        </div>
-        <div class="w-[20rem] sm:w-[30rem] sm:h-[25rem] h-[18rem] mx-auto overflow-hidden">
-            <img src="./assets/images/hero-img.png" alt="" class=" object-contain object-top mx-auto">
-        </div>
-    </section>
+            <div class="w-full max-w-[40rem] sm:w-[40rem] sm:h-[35rem] h-[23rem] mx-auto overflow-hidden">
+                <img src="./assets/images/hero-img.png" alt="" class="w-full object-contain object-top mx-auto">
+            </div>
+        </section>
+    </div>
     <div class="w-full h-20 -mt-4" style="background: url('./assets/images/hero-bottom.svg') center no-repeat;">
     </div>
     <!-- Heros End -->
@@ -244,6 +296,7 @@
         </div>
     </section>
     <!-- Carear Section End -->
+
     <!-- Footer Start -->
     <footer class="bg-black">
         <div class="container mx-auto py-8 md:px-16 px-6">
