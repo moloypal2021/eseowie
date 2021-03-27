@@ -14,6 +14,16 @@ module.exports = {
         paragraph: "#656565",
         blue: "#173EFF",
       },
+      scale: {
+        200: "2",
+        300: "100",
+      },
+      transformOrigin: {
+        "top-right-8": "96% 10%",
+      },
+      borderRadius: {
+        50: "100%",
+      },
     },
   },
   variants: {
