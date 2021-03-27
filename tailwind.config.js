@@ -8,9 +8,11 @@ module.exports = {
     extend: {
       colors: {
         purple: "#4D0ADB",
+        purple2: "#3C06B0",
         yellow: "#C0E914",
         "paragraph-alt": "#A6A6A6",
         paragraph: "#656565",
+        blue: "#173EFF",
       },
     },
   },
