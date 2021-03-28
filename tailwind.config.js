@@ -14,6 +14,7 @@ module.exports = {
         paragraph: "#656565",
         blue: "#173EFF",
         border: "#C4C4C4",
+        green: "#006D53",
       },
       scale: {
         200: "2",
