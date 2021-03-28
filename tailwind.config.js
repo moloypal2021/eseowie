@@ -1,7 +1,7 @@
 module.exports = {
   purge: {
     enabled: false,
-    content: ["./public/index.html"],
+    content: ["./public/**/*.html"],
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -13,6 +13,7 @@ module.exports = {
         "paragraph-alt": "#A6A6A6",
         paragraph: "#656565",
         blue: "#173EFF",
+        border: "#C4C4C4",
       },
       scale: {
         200: "2",

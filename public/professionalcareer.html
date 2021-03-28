@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EseOwie</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
+    <!-- Flickity -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" defer></script>
+    <!-- Alpine Js -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+</head>
+
+<body>
+    <!-- Nav Bar Start-->
+    <nav class="md:px-16 px-6 md:py-12 py-8 bg-purple">
+        <div class="flex justify-between items-center">
+            <div class="">
+                <a href="index.html" class="">
+                    <img src="./assets/images/logo.svg" alt="" class="w-40 sm:w-48 md:w-56 lg:w-[16vw]">
+                </a>
+            </div>
+            <div class="" x-data="{openNav: false}">
+                <!-- Nav Toggle Button -->
+                <button
+                    class="md:w-16 sm:w-14 w-12 md:h-16 sm:h-14 h-12 rounded-full bg-purple2 flex items-center justify-center focus:outline-none  z-10"
+                    @click="openNav = true" x-show="!openNav">
+                    <img src="./assets/images/nav-btn.svg" alt="" class="">
+                </button>
+
+                <!-- Nav Toggle Area -->
+                <div x-show="openNav" class="fixed inset-x-0 top-0 z-50 h-full overflow-y-scroll bg-purple">
+                    <div class="">
+                        <div class="flex justify-between items-center md:px-16 px-6 md:py-12 py-8">
+                            <div class="">
+                                <a href="index.html" class="">
+                                    <img src="./assets/images/logo.svg" alt="" class="w-40 sm:w-48 md:w-56 lg:w-[16vw]">
+                                </a>
+                            </div>
+                            <div class="">
+                                <button
+                                    class="md:w-16 sm:w-14 w-12 md:h-16 sm:h-14 h-12 rounded-full bg-purple2 flex items-center justify-center focus:outline-none"
+                                    @click="openNav = false">
+                                    <img src="./assets/images/close.svg" alt="" class="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="py-20 md:px-16 px-6"
+                            style="background: url('./assets/images/left-ring.svg') left bottom -2rem no-repeat, url('./assets/images/right-ring.svg') right top no-repeat, #4D0ADB; background-size: 18rem, 11rem;">
+                            <ul class="">
+                                <li class="mb-11 block"><a href="politicalcareer.html"
+                                        class="md:text-3xl text-2xl text-white font-medium">Political
+                                        Career</a></li>
+                                <li class="mb-11 block"><a href="professionalcareer.html"
+                                        class="md:text-3xl text-2xl text-white font-medium">Professional Career</a></li>
+                                <li class="mb-11 block"><a href="academics.html"
+                                        class="md:text-3xl text-2xl text-white font-medium">Academics
+                                        Pedigree</a></li>
+                                <li class="mb-11 block"><a href="#"
+                                        class="md:text-3xl text-2xl text-white font-medium">Social
+                                        Enterprise</a></li>
+                                <li class="mb-11 block"><a href="#"
+                                        class="md:text-3xl text-2xl text-white font-medium">Publications</a></li>
+                                <li class="mb-11 block"><a href="#"
+                                        class="md:text-3xl text-2xl text-white font-medium">Contact</a></li>
+                            </ul>
+                        </div>
+                        <!-- Footer Start -->
+                    </div>
+                    <footer class="bg-black">
+                        <div class="container mx-auto py-8 md:px-16 px-6">
+                            <div class="flex flex-wrap justify-between items-start mb-6">
+                                <div class="pt-2">
+                                    <img src="./assets/images/logo.svg" alt="" class="w-28 sm:w-36 md:w-48 lg:w-[16vw]">
+                                </div>
+                                <div class="">
+                                    <ul>
+                                        <li class="mb-4"><a href="politicalcareer.html"
+                                                class="sm:text-base text-xs text-white font-medium">Political
+                                                Career</a>
+                                        </li>
+                                        <li class="mb-4"><a href=""
+                                                class="sm:text-base text-xs text-white font-medium">Professional
+                                                Career</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="">
+                                    <ul>
+                                        <li class="mb-4"><a href=""
+                                                class="sm:text-base text-xs text-white font-medium">Political
+                                                Career</a>
+                                        </li>
+                                        <li class="mb-4"><a href=""
+                                                class="sm:text-base text-xs text-white font-medium">Professional
+                                                Career</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap justify-between">
+                                <p class="sm:text-xs text-[10px] text-paragraph-alt">Copyright © 2021 Ese Owie</p>
+                                <p class="sm:text-xs text-[10px] text-paragraph-alt">Designed and Developed by
+                                    Techinnover Analytics</p>
+                            </div>
+                        </div>
+
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <!-- Nav Bar End-->
+
+
+    <!-- Heros Start-->
+    <section class="-mt-1 mb-20">
+        <div class="md:px-16 px-6 py-10 bg-purple">
+            <div class="flex justify-between items-center">
+                <h1 class="text-[55px] sm:text-8xl text-white leading-none">Professional
+                    Career
+                </h1>
+                <img src="./assets/images/professional-icon.svg" alt="" class="w-20">
+            </div>
+        </div>
+        <div class="w-full h-20 -mt-4" style="background: url('./assets/images/hero-bottom.svg') center no-repeat;">
+        </div>
+    </section>
+    <!-- Heros End -->
+
+    <!-- Content Section Start -->
+    <section class="container mx-auto py-10 md:px-16 px-6 mb-12">
+        <div class="">
+            <img src="./assets/images/img-2.png" alt="" class="w-full h-[40vw] object-cover mb-16">
+            <p class="sm:text-base text-sm text-paragraph mb-8">A consistent advocate of the convergence of theory and
+                practice in Governance especially in emerging economies, Dr Owie served between 2011 and 2016, as
+                Executive Director & Chief Responsibility Officer of the Centre for International Trade & Policy
+                (CITaP), Geneva, Switzerland. CiTAP, is a Think Tank and Research Centre that provides cutting-edge,
+                actionable advice to Governments, Non-State Actors and Civil Society Organizations on, amongst other
+                things, the mainstreaming of Environmental Social and Governance (ESG) considerations in Trade Policy
+                Formulation and Sequencing, Sustainability and Developmental Strategy.</p>
+            <p class="sm:text-base text-sm text-paragraph mb-12">In the wake of the 2008 global financial crisis, Dr
+                Owie
+                co-founded Climate Change Africa (CCA), a Third Sector Policy Action and Research Centre that is
+                committed to taking urgent action to cut greenhouse gas emissions, speed the global shift to renewables
+                and a sustainable green economy. CCA has, over the years, demonstrated commitment to building a more
+                just and equitable world, one where all voices, especially those of the Global South, are heard and
+                respected in the global climate change debate. CCA recognizes that a diverse and inclusive movement is
+                critical to solving the climate crisis, and that to build this coalition, Nations must ensure that those
+                directly impacted – particularly those who have been excluded in the past – are at the center of the
+                movement for change., CCA is thus at the forefront of raising awareness that indigenous peoples,
+                low-income families and other historically marginalized groups in Africa represent frontline communities
+                who experience harmful climate impacts first and are worse hit. The international community must
+                consequently commit to understanding and undoing the historic injustices which contribute to this
+                reality and, in proffering solutions, address systemic inequities.</p>
+            <h2 class="md:text-3xl sm:text-2xl text-xl text-black font-medium mb-5">A leading international trade expert
+            </h2>
+
+            <p class="sm:text-base text-sm text-paragraph mb-14">Dr. Owie is a leading international trade expert,
+                providing technical capacity in trade policy formulation in the Global South, especially in Africa. In
+                2016, he co-founded The Cavendish Institute, a highly specialized provider of technical assistance and
+                negotiating advice on international trade issues. Cavendish provides timely, pragmatic and
+                cost-efficient advice, representation and capacity building in the context of trade negotiations, the
+                formulation and implementation of national trade policy and the settlement of disputes. It has risen to
+                become a high caliber, reputable institute, comprised of a core team of experienced trade practitioners
+                based in Geneva, London, Washington DC, Paris, Toronto, Johannesburg, Nairobi and Abuja, with academic
+                and consulting capacity drawn from its global network of trade experts. The Institute serves Governments
+                of developed and developing countries, International Governmental Organizations as well as Third Sector
+                Groups, Trade Association and Businesses.</p>
+
+            <!-- Slider Start -->
+            <div class="mb-14">
+                <div x-data="carousel()" x-init="init()">
+                    <div x-ref="carousel">
+                        <img src="./assets/images/img-2.png" alt="" class="w-full h-[40vw] object-cover mb-4">
+                        <img src="./assets/images/img-1.png" alt="" class="w-full h-[40vw] object-cover mb-4">
+                        <img src="./assets/images/img-3.png" alt="" class="w-full h-[40vw] object-cover mb-4">
+                        <img src="./assets/images/img-4.png" alt="" class="w-full h-[40vw] object-cover mb-4">
+                        <img src="./assets/images/img-2.png" alt="" class="w-full h-[40vw] object-cover mb-4">
+                    </div>
+
+                    <div class="flex items-center justify-end">
+                        <span class="mr-1" @click="prev()">
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 1L5 0 0 5l5 5 1-1-4-4 4-4z" fill="#000" />
+                            </svg>
+                        </span>
+                        <span class="mr-1">
+                            <svg width="54" height="1" viewBox="0 0 54 1" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="#000" d="M0 .5h54" />
+                            </svg>
+                        </span>
+                        <span class="mr-3" @click="next()">
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 1l1-1 5 5-5 5-1-1 4-4-4-4z" fill="#000" />
+                            </svg>
+                        </span>
+                        <span class="text-xs text-black font-medium" x-text="[active + 1 + '/' + length ]">
+                            /10</span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Slider End -->
+
+
+            <h2 class="md:text-3xl sm:text-2xl text-xl text-black font-medium mb-5">Garnered advanced competencies in
+                all areas of international trade law, policy and economics, within and beyond the World Trade
+                Organization (WTO) context.
+            </h2>
+
+            <p class="sm:text-base text-sm text-paragraph mb-8">In his capacity as President of the Cavendish
+                Institute, Dr Owie has garnered advanced competencies in all areas of international trade law, policy
+                and economics, within and beyond the World Trade Organization (WTO) context. He is proficient in matters
+                ranging from the Doha Development Agenda to WTO dispute settlement, from GATT to GATS, trade remedies,
+                trade competition, agriculture, market access, domestic regulation, trade and environment to trade and
+                investment. He is also a specialialist in numerous trade-related issues including services regulation
+                and related policy-making, the design of goods offers and their negotiation, trade and climate change,
+                SPS and NTBs, trade facilitation, subsidies, and government procurement. He has demonstrated expertise
+                in WTO accessions, from observership via bilaterals to pre- and post- accession implementation. A
+                respected practitioner in the area of bilateral and regional trade systems, He has advised on African
+                Union trade law and policy, including the process leading to the negotiation, ratification and entry
+                into force of theAfrican Continental Free Trade Agreement (AfCFTA). Through his academic and public
+                engagements, he has exhibited profound understanding and expertise in various aspects of the EU’s trade
+                relations with the African, as well the Caribbean and Pacific Group. His expertise is further
+                demonstrated in his work on regional integration processes and agreement such as SADC, COMESA, Pacific
+                Islands Forum, ASEAN and CARICOM.</p>
+            <p class="sm:text-base text-sm text-paragraph">Beyond his interest in the research and practice of
+                Public International Law and International Trade Policy, Dr Owie also serves as the Chairman & CEO of
+                Numelec Africa Holdings (NAH), the strategic partner of Numelec SA Group in the Continent of Africa.
+
+                Numelec SA of Geneva is a global leader in providing a uniquely broad spectrum of innovative medical
+                diagnostic and healthcare infrastructure solutions in today's rapidly changing healthcare environment.
+                Over the last Seventy (70) Years, Numelec has remained at the top in the development & marketing of
+                cutting-edge healthcare products & solutions, with an operations network spanning over 90 countries
+                across 5 Continents. NAH warehouses the African operations of the Numelec SA Group, coordinating a
+                continent-wide procurement and project management network covering over thirty (50) African countries.
+                In his role as Chairman & CEO of NAH, Dr Owie coordinates the conceptualization and implementation of
+                all Numelec's healthcare infrastructure and renewable energy projects across Africa.</p>
+
+        </div>
+    </section>
+    <!-- Content Section End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-black">
+        <div class="container mx-auto py-8 md:px-16 px-6">
+            <div class="flex flex-wrap justify-between items-start mb-6">
+                <div class="pt-2">
+                    <img src="./assets/images/logo.svg" alt="" class="w-28 sm:w-36 md:w-48 lg:w-[16vw]">
+                </div>
+                <div class="">
+                    <ul>
+                        <li class="mb-4"><a href="politicalcareer.html"
+                                class="sm:text-base text-xs text-white font-medium">Political
+                                Career</a>
+                        </li>
+                        <li class="mb-4"><a href="professionalcareer.html"
+                                class="sm:text-base text-xs text-white font-medium">Professional
+                                Career</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="">
+                    <ul>
+                        <li class="mb-4"><a href="" class="sm:text-base text-xs text-white font-medium">Political
+                                Career</a>
+                        </li>
+                        <li class="mb-4"><a href="" class="sm:text-base text-xs text-white font-medium">Professional
+                                Career</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-between">
+                <p class="sm:text-xs text-[10px] text-paragraph-alt">Copyright © 2021 Ese Owie</p>
+                <p class="sm:text-xs text-[10px] text-paragraph-alt">Designed and Developed by Techinnover Analytics</p>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Footer End -->
+
+    <script>
+        function carousel() {
+            return {
+                active: 0,
+                length: 0,
+                init() {
+                    var flkty = new Flickity(this.$refs.carousel, {
+                        wrapAround: true,
+                        autoPlay: 4000,
+                        prevNextButtons: false,
+                        pageDots: false,
+                        draggable: false
+                    });
+                    flkty.on('change', i => this.active = i);
+                    this.length = flkty.cells.length;
+                },
+                prev() {
+                    var flkty = new Flickity(this.$refs.carousel);
+                    flkty.previous();
+                },
+                next() {
+                    var flkty = new Flickity(this.$refs.carousel);
+                    flkty.next();
+                }
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

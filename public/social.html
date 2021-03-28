@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EseOwie</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
+    <!-- Flickity -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" defer></script>
+    <!-- Alpine Js -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+</head>
+
+<body>
+    <!-- Nav Bar Start-->
+    <nav class="md:px-16 px-6 md:py-12 py-8 bg-purple">
+        <div class="flex justify-between items-center">
+            <div class="">
+                <a href="index.html" class="">
+                    <img src="./assets/images/logo.svg" alt="" class="w-40 sm:w-48 md:w-56 lg:w-[16vw]">
+                </a>
+            </div>
+            <div class="" x-data="{openNav: false}">
+                <!-- Nav Toggle Button -->
+                <button
+                    class="md:w-16 sm:w-14 w-12 md:h-16 sm:h-14 h-12 rounded-full bg-purple2 flex items-center justify-center focus:outline-none  z-10"
+                    @click="openNav = true" x-show="!openNav">
+                    <img src="./assets/images/nav-btn.svg" alt="" class="">
+                </button>
+
+                <!-- Nav Toggle Area -->
+                <div x-show="openNav" class="fixed inset-x-0 top-0 z-50 h-full overflow-y-scroll bg-purple">
+                    <div class="">
+                        <div class="flex justify-between items-center md:px-16 px-6 md:py-12 py-8">
+                            <div class="">
+                                <a href="index.html" class="">
+                                    <img src="./assets/images/logo.svg" alt="" class="w-40 sm:w-48 md:w-56 lg:w-[16vw]">
+                                </a>
+                            </div>
+                            <div class="">
+                                <button
+                                    class="md:w-16 sm:w-14 w-12 md:h-16 sm:h-14 h-12 rounded-full bg-purple2 flex items-center justify-center focus:outline-none"
+                                    @click="openNav = false">
+                                    <img src="./assets/images/close.svg" alt="" class="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="py-20 md:px-16 px-6"
+                            style="background: url('./assets/images/left-ring.svg') left bottom -2rem no-repeat, url('./assets/images/right-ring.svg') right top no-repeat, #4D0ADB; background-size: 18rem, 11rem;">
+                            <ul class="">
+                                <li class="mb-11 block"><a href="politicalcareer.html"
+                                        class="md:text-3xl text-2xl text-white font-medium">Political
+                                        Career</a></li>
+                                <li class="mb-11 block"><a href="professionalcareer.html"
+                                        class="md:text-3xl text-2xl text-white font-medium">Professional Career</a></li>
+                                <li class="mb-11 block"><a href="academics.html"
+                                        class="md:text-3xl text-2xl text-white font-medium">Academics
+                                        Pedigree</a></li>
+                                <li class="mb-11 block"><a href="social.html"
+                                        class="md:text-3xl text-2xl text-white font-medium">Social
+                                        Enterprise</a></li>
+                                <li class="mb-11 block"><a href="publications.html"
+                                        class="md:text-3xl text-2xl text-white font-medium">Publications</a></li>
+                                <li class="mb-11 block"><a href="contact.html"
+                                        class="md:text-3xl text-2xl text-white font-medium">Contact</a></li>
+                            </ul>
+                        </div>
+                        <!-- Footer Start -->
+                    </div>
+                    <footer class="bg-black">
+                        <div class="container mx-auto py-8 md:px-16 px-6">
+                            <div class="flex flex-wrap justify-between items-start mb-6">
+                                <div class="pt-2">
+                                    <img src="./assets/images/logo.svg" alt="" class="w-28 sm:w-36 md:w-48 lg:w-[16vw]">
+                                </div>
+                                <div class="">
+                                    <ul>
+                                        <li class="mb-4"><a href="politicalcareer.html"
+                                                class="sm:text-base text-xs text-white font-medium">Political
+                                                Career</a>
+                                        </li>
+                                        <li class="mb-4"><a href=""
+                                                class="sm:text-base text-xs text-white font-medium">Professional
+                                                Career</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="">
+                                    <ul>
+                                        <li class="mb-4"><a href=""
+                                                class="sm:text-base text-xs text-white font-medium">Political
+                                                Career</a>
+                                        </li>
+                                        <li class="mb-4"><a href=""
+                                                class="sm:text-base text-xs text-white font-medium">Professional
+                                                Career</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap justify-between">
+                                <p class="sm:text-xs text-[10px] text-paragraph-alt">Copyright © 2021 Ese Owie</p>
+                                <p class="sm:text-xs text-[10px] text-paragraph-alt">Designed and Developed by
+                                    Techinnover Analytics</p>
+                            </div>
+                        </div>
+
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <!-- Nav Bar End-->
+
+
+    <!-- Heros Start-->
+    <section class="-mt-1 mb-20">
+        <div class="md:px-16 px-6 py-10 bg-purple">
+            <div class="flex justify-between items-center">
+                <h1 class="text-[55px] sm:text-8xl text-white leading-none">Social
+                    Enterprise
+                </h1>
+                <!-- <img src="./assets/images/publication.svg" alt="" class="w-20"> -->
+            </div>
+        </div>
+        <div class="w-full h-20 -mt-4" style="background: url('./assets/images/hero-bottom.svg') center no-repeat;">
+        </div>
+    </section>
+    <!-- Heros End -->
+
+    <!-- Content Section Start -->
+    <section class="container mx-auto py-10 md:px-16 px-6 mb-64">
+        <h2 class="md:text-3xl sm:text-2xl text-xl text-black font-medium text-center">Content goes here
+        </h2>
+    </section>
+    <!-- Content Section End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-black">
+        <div class="container mx-auto py-8 md:px-16 px-6">
+            <div class="flex flex-wrap justify-between items-start mb-6">
+                <div class="pt-2">
+                    <img src="./assets/images/logo.svg" alt="" class="w-28 sm:w-36 md:w-48 lg:w-[16vw]">
+                </div>
+                <div class="">
+                    <ul>
+                        <li class="mb-4"><a href="politicalcareer.html"
+                                class="sm:text-base text-xs text-white font-medium">Political
+                                Career</a>
+                        </li>
+                        <li class="mb-4"><a href="professionalcareer.html"
+                                class="sm:text-base text-xs text-white font-medium">Professional
+                                Career</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="">
+                    <ul>
+                        <li class="mb-4"><a href="" class="sm:text-base text-xs text-white font-medium">Political
+                                Career</a>
+                        </li>
+                        <li class="mb-4"><a href="" class="sm:text-base text-xs text-white font-medium">Professional
+                                Career</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-between">
+                <p class="sm:text-xs text-[10px] text-paragraph-alt">Copyright © 2021 Ese Owie</p>
+                <p class="sm:text-xs text-[10px] text-paragraph-alt">Designed and Developed by Techinnover Analytics</p>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Footer End -->
+
+</body>
+
+</html>
